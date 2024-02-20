@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://sym81orvavf0"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_fkonn"]
+
+[node name="Player" type="Area2D"]
+script = ExtResource("1_fkonn")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

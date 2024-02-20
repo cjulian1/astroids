@@ -1,11 +1,46 @@
-[gd_scene load_steps=2 format=3 uid="uid://sym81orvavf0"]
+[gd_scene load_steps=7 format=3 uid="uid://sym81orvavf0"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_fkonn"]
+[ext_resource type="Texture2D" uid="uid://dhfymptxa3d72" path="res://assets/Flying Assets/flying1.png" id="2_x4mas"]
+[ext_resource type="Texture2D" uid="uid://cqqb88koaipdb" path="res://assets/Flying Assets/flying2.png" id="3_d0pcr"]
+[ext_resource type="Texture2D" uid="uid://8j62t1c33ak1" path="res://assets/pixil-frame-0.png" id="4_6ofm0"]
+[ext_resource type="Texture2D" uid="uid://r5bw744uo8yw" path="res://assets/Flying Assets/flying3.png" id="4_8a6im"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6rtiu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_x4mas")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_d0pcr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8a6im")
+}],
+"loop": true,
+"name": &"flying",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_6ofm0")
+}],
+"loop": true,
+"name": &"stationary",
+"speed": 5.0
+}]
 
 [node name="Player" type="Area2D"]
+position = Vector2(89, 227)
 script = ExtResource("1_fkonn")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(106.5, 107.5)
+scale = Vector2(7.65625, 7.71875)
+sprite_frames = SubResource("SpriteFrames_6rtiu")
+animation = &"stationary"
+speed_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

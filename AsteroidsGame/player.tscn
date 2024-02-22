@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://sym81orvavf0"]
+[gd_scene load_steps=8 format=3 uid="uid://sym81orvavf0"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_fkonn"]
 [ext_resource type="Texture2D" uid="uid://dhfymptxa3d72" path="res://assets/Flying Assets/flying1.png" id="2_x4mas"]
@@ -31,8 +31,11 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6mt0x"]
+size = Vector2(115, 40)
+
 [node name="Player" type="Area2D"]
-position = Vector2(89, 227)
+position = Vector2(174, 317)
 script = ExtResource("1_fkonn")
 metadata/_edit_group_ = true
 
@@ -44,3 +47,5 @@ animation = &"stationary"
 speed_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(102.5, 73)
+shape = SubResource("RectangleShape2D_6mt0x")
